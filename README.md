@@ -10,15 +10,15 @@ Specifically, a Linux Loadable Kernel Module (LKM) implements a driver for a fak
 1. Install Linux kernel headers (if not already installed):
 
 ```
-sudo apt update
-sudo apt install linux-headers-$(uname -r)
+$ sudo apt update
+$ sudo apt install linux-headers-$(uname -r)
 ```
 
 2. Compile and insert the kernel module:
 
 ```bash
-make
-sudo insmod fake_moving_mouse.ko
+$ make
+$ sudo insmod fake_moving_mouse.ko
 ```
 
 3. Your mouse should move automatically now. You can verify the module is loaded and the device is created:
@@ -45,5 +45,5 @@ B: REL=3
 Remove the kernel module:
 
 ```bash
-sudo rmmod fake_moving_mouse
+$ sudo rmmod fake_moving_mouse
 ```
