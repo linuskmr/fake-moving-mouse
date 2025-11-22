@@ -1,6 +1,6 @@
 # Fake Moving Mouse
 
-In times of cooperate tools such as [Microsoft Teams reporting your active status depending on your computer activity](https://learn.microsoft.com/en-us/microsoftteams/presence-admins#automatic-status-settings), it can be a [pressing question how to simulate work if you do not particularly like your job](https://www.reddit.com/r/MicrosoftTeams/comments/1aksxbt/whats_the_best_way_to_show_always_available/). To avoid you to buy a [mouse jiggler](https://www.amazon.com/s?k=mouse+jiggler), this project provides a software solution.
+In times of cooperate tools such as [Microsoft Teams reporting your active status depending on your computer activity](https://learn.microsoft.com/en-us/microsoftteams/presence-admins#automatic-status-settings), it can be a [pressing question how to simulate work](https://www.reddit.com/r/MicrosoftTeams/comments/1aksxbt/whats_the_best_way_to_show_always_available/), for example if you do not particularly like your job. To avoid you to buy a [mouse jiggler](https://www.amazon.com/s?k=mouse+jiggler), this project provides a software solution.
 
 Specifically, a Linux Loadable Kernel Module (LKM) implements a driver for a fake virtual mouse that continuously moves your mouse pointer, thus keeping your status active.
 
