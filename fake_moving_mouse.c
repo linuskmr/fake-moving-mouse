@@ -67,10 +67,10 @@ static int __init mouse_init(void) {
 	}
 
 	move_mouse_kthread = kthread_run(continuously_move_mouse, NULL, "move_fake_moving_mouse");
-    if (IS_ERR(move_mouse_kthread)) {
-        input_unregister_device(mouse_dev);
-        return PTR_ERR(move_mouse_kthread);
-    }
+	if (IS_ERR(move_mouse_kthread)) {
+		input_unregister_device(mouse_dev);
+		return PTR_ERR(move_mouse_kthread);
+	}
 
 	return 0;
 
@@ -83,7 +83,9 @@ static void __exit mouse_exit(void) {
 	if (move_mouse_kthread) {
 		kthread_stop(move_mouse_kthread);
 	}
-	input_unregister_device(mouse_dev);
+	if (mouse_dev) {
+		input_unregister_device(mouse_dev);
+	}
 }
 
 module_init(mouse_init);
